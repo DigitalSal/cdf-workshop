@@ -22,6 +22,7 @@ The Hands On Labs in this workshop will take you through how to use the Cloudera
 *(2) Flow 2:*  Collect, filter and stream syslog data to Kafka for Real-time analytics +
 
 image::./images/misc/RefArch.PNG[]
+<img src="./images/misc/RefArch.PNG" alt="Ref Arch">
 
 == Pre-requisites
 
