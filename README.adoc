@@ -21,7 +21,7 @@ The Hands On Labs in this workshop will take you through how to use the Cloudera
 *(1) Flow 1:*  Collect and store syslog data in an S3 Bucket +
 *(2) Flow 2:*  Collect, filter and stream syslog data to Kafka for Real-time analytics +
 
-image::/DigitalSal/cdf-workshop/blob/master/images/misc/RefArch.PNG[]
+image::images/misc/RefArch.PNG[]
 
 == Pre-requisites
 
