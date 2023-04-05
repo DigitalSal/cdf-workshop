@@ -21,7 +21,7 @@ The Hands On Labs in this workshop will take you through how to use the Cloudera
 *(1) Flow 1:*  Collect and store syslog data in an S3 Bucket +
 *(2) Flow 2:*  Collect, filter and stream syslog data to Kafka for Real-time analytics +
 
-image::images/misc/RefArch.png[]
+image::./images/misc/RefArch.png[]
 
 == Pre-requisites
 
@@ -44,11 +44,11 @@ Open the below link and login with the credentials assigned to you.
 
 http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop Login]
 
-image::images/misc/Login.PNG[]
+image::images/misc/Login.png[]
 
 You should land on the CDP Console as shown below. 
 
-image::images/misc/CDPConsole.PNG[]
+image::images/misc/CDPConsole.png[]
 
 === Setting Workload Password
 
@@ -89,44 +89,44 @@ The following is a step by step guide in building a data flow for use within CDF
 ==== 2.1. Create the canvas to design your flow
 ===== **Step 1** : Access the DataFlow dataservice from the Management Console
 
-image:images/lab1/2-1step1.PNG[] +
+image:images/lab1/2-1step1.png[] +
 
 ===== **Step 2** : Got to the Flow Design
 
-image:images/lab1/2-1step2.PNG[] +
+image:images/lab1/2-1step2.png[] +
 
 ===== **Step 3** : Create a new Draft ( This will be the main process group of your flow )
  
-image:images/lab1/2-1step3.PNG[] +
+image:images/lab1/2-1step3.png[] +
 
 ===== **Step 4** : Select the appropriate environment and give your flow a name and click on CREATE
 
-image:images/lab1/2-1step4.PNG[] +
+image:images/lab1/2-1step4.png[] +
 
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow
 
-image:images/lab1/2-1step4-1.PNG[] +
+image:images/lab1/2-1step4-1.png[] +
 
 ==== 2.2. Adding new parameters
 ===== **Step 1** : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS
 
-image:images/lab1/2-2step1.PNG[] +
+image:images/lab1/2-2step1.png[] +
 
 ===== **Step 2** : Configure Parameters
 The next step is to configure what is called a parameter.  These parameters are reused within the flow multiple times and will also be configurable at the time of deployment. Click on ADD PARAMETER to add non sensitive values, for any sensitive parameter please select ADD SENSITIVE PARAMETER.
 
-image:images/lab1/2-2step2.PNG[] +
+image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
 
 - HDFS Directory +
-image:images/lab1/2-2step2-1.PNG[width=600] +
+image:images/lab1/2-2step2-1.png[width=600] +
 
 - CDP Workload User +
-image:images/lab1/2-2step2-2.PNG[width=600] +
+image:images/lab1/2-2step2-2.png[width=600] +
 
 - CDP Workload User Password - [ Sensitive Field ] +
-image:images/lab1/2-2step2-3.PNG[width=600] +
-image:images/lab1/2-2step2-4.PNG[width=600] +
+image:images/lab1/2-2step2-3.png[width=600] +
+image:images/lab1/2-2step2-4.png[width=600] +
 
 Click `APPLY CHANGES`
 
@@ -145,17 +145,17 @@ Let’s go back to the canvas to start designing our flow.This flow will contain
 
 - GenerateFlowFile - Generates random data
 - PutCDPObjectStore - Loads data into HDFS(S3)
-image:images/lab1/2-3step.PNG[width=600] +
+image:images/lab1/2-3step.png[width=600] +
 
 ===== **STEP 1** : Add GenerateFlowFile processor 
 Pull the Processor onto the canvas and select `GenerateFlowFile` Processor and click on `ADD`.
-image:images/lab1/2-3step1.PNG[width=600] +
+image:images/lab1/2-3step1.png[width=600] +
 
-image:images/lab1/2-3step1-1.PNG[width=600] +
+image:images/lab1/2-3step1-1.png[width=600] +
 
 ===== **STEP 2** : Configure GenerateFlowFile processor 
 The GenerateFlowFile Processor will now be on your canvas and you can configure it in the following way by right clicking and selecting Configuration. +
-image:images/lab1/2-3step2.PNG[width=600] +
+image:images/lab1/2-3step2.png[width=600] +
 
 Configure the processor in the following way:
 
@@ -173,12 +173,12 @@ stopped unexpectedly
 ----
 This represents a syslog out in RFC5424 format. Subsequent portions of this workshop will leverage this same syslog format.
 
-image:images/lab1/2-3step2-1.PNG[width=600] +
+image:images/lab1/2-3step2-1.png[width=600] +
 Click on `APPLY`.
 
 ===== **STEP 3** : Add PutCDPObjectStore processor 
 Pull the Processor onto the canvas and select PutCDPObjectStore Processor and click on ADD.
-image:images/lab1/2-3step3.PNG[width=600] +
+image:images/lab1/2-3step3.png[width=600] +
 
 ===== **STEP 4** : Configure PutCDPObjectStore processor 
 The PutCDPObjectStore Processor needs to be configured as follows:
@@ -194,24 +194,24 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 	* **CDP Password** : #{CDP Workload User Password}
 - **Settings - Auto Terminate Relationships**: Check the Success box
 
-image:images/lab1/2-3step4.PNG[width=600] +
+image:images/lab1/2-3step4.png[width=600] +
 
-image:images/lab1/2-3step4-1.PNG[width=600] +
+image:images/lab1/2-3step4-1.png[width=600] +
 
 ===== **STEP 5** : Create connection between processors
 Connect the two processors by dragging the arrow from **DataGenerator** processor to the **Move2S3** processor and select on **SUCCESS** relation and click **ADD**
 
-image:images/lab1/2-3step5.PNG[width=600] +
+image:images/lab1/2-3step5.png[width=600] +
 
-image:images/lab1/2-3step5-1.PNG[width=600] +
+image:images/lab1/2-3step5-1.png[width=600] +
 
 Your flow will now look something like this +
-image:images/lab1/2-3step5-2.PNG[width=600] +
+image:images/lab1/2-3step5-2.png[width=600] +
 
 The Move2S3 processor does not know what to do in case of a failure, let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself.
-image:images/lab1/2-3step5-3.PNG[width=600] +
+image:images/lab1/2-3step5-3.png[width=600] +
 
-image:images/lab1/2-3step5-4.PNG[width=600] +
+image:images/lab1/2-3step5-4.png[width=600] +
 
 ==== 2.4.  Naming the queues
 Providing unique names to all queues is very important as they are used to define Key Performance Indicators upon which CDF-PC will auto-scale.
@@ -220,99 +220,99 @@ To name a queue, double-click the queue and give it a unique name.  A best pract
 
 For example, the success queue between GenerateFlowFile and PutCDPObjectStore is named **success_GenerateToCDP**. The failure queue for PutCDPObjectStore is named **failure_PutCDPObjectStore**.
 
-image:images/lab1/2-4step.PNG[width=600] +
+image:images/lab1/2-4step.png[width=600] +
 
 
 === 3.  Testing the Data Flow
-===== **STEP 1** : Start test session
+**STEP 1** : Start test session
 To test your flow we need to first start the test session
 Click on **FLOW OPTIONS** and then select **START** on TEST SESSION
 
-image:images/lab1/3step1.PNG[] +
+image:images/lab1/3step1.png[] +
 In the next window, click START SESSION +
-image:images/lab1/3step1-1.PNG[width=600] +
+image:images/lab1/3step1-1.png[width=600] +
 
 The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen +
-image:images/lab1/3step1-2.PNG[width=600] +
+image:images/lab1/3step1-2.png[width=600] +
 
 Once the Test Session is ready you will see the following message on the top right corner of your screen. +
-image:images/lab1/3step1-3.PNG[width=600] +
+image:images/lab1/3step1-3.png[width=600] +
 
-===== **STEP 2** : Run the flow
+**STEP 2** : Run the flow
 Right click on the empty part of the canvas and select START. +
-image:images/lab1/3step2-1.PNG[width=600] +
+image:images/lab1/3step2-1.png[width=600] +
 
 Both the processors should now be in the START state. +
-image:images/lab1/3step2-2.PNG[width=600] +
+image:images/lab1/3step2-2.png[width=600] +
 
 You will now see files coming into the folder which was specified as the Directory on the S3 bucket which is the Base data store for this environment. +
-image:images/lab1/3step2-3.PNG[width=600] +
+image:images/lab1/3step2-3.png[width=600] +
 
-image:images/lab1/3step2-4.PNG[width=600] +
+image:images/lab1/3step2-4.png[width=600] +
 
 Delete unwanted parameter +
 In the Move2S3 processor configuration delete the **cdp.configuration.resources** property +
-image:images/lab1/3step2-5.PNG[width=600] +
+image:images/lab1/3step2-5.png[width=600] +
 
 Click on **APPLY** +
-image:images/lab1/3step2-6.PNG[width=600] +
+image:images/lab1/3step2-6.png[width=600] +
 
 
 === 4.  Move the Flow to the Flow Catalog
 After the flow has been created and tested we can now PUBLISH the flow to the Flow Catalog
 
-image:images/lab1/4step1.PNG[] +
+image:images/lab1/4step1.png[] +
 
-image:images/lab1/4step2.PNG[width=600] +
+image:images/lab1/4step2.png[width=600] +
 
-image:images/lab1/4step3.PNG[width=600] +
+image:images/lab1/4step3.png[width=600] +
 
 === 5. Deploying the Flow
 **Step 1** : Search for the flow in the Flow Catalog +
 
-image:images/lab1/5step1-1.PNG[width=600] +
+image:images/lab1/5step1-1.png[width=600] +
 
 Click on the Flow, you should see the following: +
-image:images/lab1/5step1-2.PNG[width=600] +
+image:images/lab1/5step1-2.png[width=600] +
 
 **Step 2** : Deploy +
 Click on **Version 1**, you should see a **Deploy** Option appear shortly. Then click on **Deploy**. +
-image:images/lab1/5step2-1.PNG[width=600] +
+image:images/lab1/5step2-1.png[width=600] +
 
 **Step 3** : Select the CDP environment where this flow will be deployed. +
-image:images/lab1/5step3-1.PNG[width=600] +
+image:images/lab1/5step3-1.png[width=600] +
 
 **Step 4** : Deployment Name +
 Give the deployment a unique name, then click Next.
-image:images/lab1/5step4-1.PNG[width=600] +
+image:images/lab1/5step4-1.png[width=600] +
 Click **NEXT**
 
 **Step 5** : Set the NiFi Configuration +
-image:images/lab1/5step5-1.PNG[width=600] +
+image:images/lab1/5step5-1.png[width=600] +
 
 **Step 6** : Set the Parameters +
 Set the Username, Password and the Directory name and click NEXT
-image:images/lab1/5step6-1.PNG[width=600] +
+image:images/lab1/5step6-1.png[width=600] +
 
 **Step 7** : Set the cluster size +
 Select the Extra Small size and click NEXT +
-image:images/lab1/5step7-1.PNG[width=600] +
+image:images/lab1/5step7-1.png[width=600] +
 
 **Step 8** : Add Key Performance indicators +
 Set up KPIs to track specific performance metrics of a deployed flow. 
-image:images/lab1/5step8-1.PNG[width=600] +
+image:images/lab1/5step8-1.png[width=600] +
 
-image:images/lab1/5step8-2.PNG[width=600] +
+image:images/lab1/5step8-2.png[width=600] +
 
-image:images/lab1/5step8-3.PNG[width=600] +
+image:images/lab1/5step8-3.png[width=600] +
 
 Click Add and then Click Next +
-image:images/lab1/5step8-4.PNG[width=600] +
+image:images/lab1/5step8-4.png[width=600] +
 
 **Step 9** : Click Deploy +
-image:images/lab1/5step9-1.PNG[width=600] +
+image:images/lab1/5step9-1.png[width=600] +
 
-image:images/lab1/5step9-2.PNG[width=600] +
+image:images/lab1/5step9-2.png[width=600] +
 
 == Lab 2 : Migrating Existing Data Flows to CDF-PC
 === 1. Overview
@@ -332,7 +332,7 @@ Note that a parameter context has already been defined in the flow and the queue
 ==== 2.1. Create a Kafka Topic
 **Step 1** :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub
 
-image:images/lab2/2-1step1-1.PNG[width=600] +
+image:images/lab2/2-1step1-1.png[width=600] +
 
 **Step 2** :Click on Topics in the right tab
 **Step 3** :Click on Add New
@@ -343,14 +343,14 @@ image:images/lab2/2-1step1-1.PNG[width=600] +
 - **Availability**: Moderate
 - **Cleanup Policy**: Delete
 
-image:images/lab2/2-1step4-1.PNG[width=600] +
+image:images/lab2/2-1step4-1.png[width=600] +
 
 **Note** : The Flow will not work if you set the Cleanup Policy to anything other than **Delete**. This is because we are not specifying keys when writing to Kafka.
 
 ==== 2.2. Create a Schema in Schema Registry
 **Step 1** : Login to Schema Registry by clicking the appropriate hyperlink in the Streams Messaging Datahub.
 
-image:images/lab2/2-2step1-1.PNG[width=600] +
+image:images/lab2/2-2step1-1.png[width=600] +
 
 **Step 2** : Click on the + button on the top right to create a new schema.
 **Step 3** : Create a new schema with the following information:
@@ -451,11 +451,11 @@ image:images/lab2/2-2step1-1.PNG[width=600] +
 === 1. Import the Flow into the CDF-PC Catalog
 **Step 1** : Open the CDF-PC data service and click on Catalog in the left tab. +
 
-image:images/lab3/1step1-1.PNG[width=400] +
+image:images/lab3/1step1-1.png[width=400] +
 
 **Step 2** : Select Import Flow Definition on the Top Right +
 
-image:images/lab3/1step2-1.PNG[width=400] +
+image:images/lab3/1step2-1.png[width=400] +
 
 **Step 3** : Add the following information:
 
@@ -467,23 +467,23 @@ Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into 
 - **NiFi Flow Configuration**: syslog-to-kafka.json (upload the Flow Definition)
 - **Version Comments**: Initial Version
 
-image:images/lab3/1step3-1.PNG[width=400] +
+image:images/lab3/1step3-1.png[width=400] +
 
 === 2. Deploy the Flow in CDF-PC
 **Step 1** : Search for the flow in the Flow Catalog +
-image:images/lab3/2step1-1.PNG[] +
+image:images/lab3/2step1-1.png[] +
 
 **Step 2** : Click on the Flow, you should see the following: +
-image:images/lab3/2step2-1.PNG[width=600] +
+image:images/lab3/2step2-1.png[width=600] +
 
 **Step 3** : Click on Version 1, you should see a Deploy Option appear shortly. Then click on Deploy. +
-image:images/lab3/2step3-1.PNG[width=600] +
+image:images/lab3/2step3-1.png[width=600] +
 
 **Step 4** : Select the CDP environment where this flow will be deployed. +
-image:images/lab3/2step4-1.PNG[width=600] +
+image:images/lab3/2step4-1.png[width=600] +
 
 **Step 5** : Give the deployment a unique name, then click Next. +
-image:images/lab3/2step5-1.PNG[width=600] +
+image:images/lab3/2step5-1.png[width=600] +
 
 
 **Step 6** : Add the Flow Parameters. These should be the same values that were used to successfully run the flow earlier in the Nif DataHub. +
@@ -507,13 +507,13 @@ to NiFi Datahub is the Kafka Producer ID
 - **Min Nodes** : 1
 - **Max Nodes** : 3
 
-image:images/lab3/2step7-1.PNG[width=600] +
+image:images/lab3/2step7-1.png[width=600] +
 
 **Step 8** : Click Next, Skip the KPI page and Review your deployment. Then Click Deploy. +
-image:images/lab3/2step8-1.PNG[width=600] +
+image:images/lab3/2step8-1.png[width=600] +
 
 **Step 9** : Proceed to the CDF-PC Dashboard and wait for your flow to deploy to complete. A Green Check Mark will appear once complete. +
-image:images/lab3/2step9-1.PNG[] +
+image:images/lab3/2step9-1.png[] +
 
 **Step 10** : Click into your deployment and then Click **Manage Deployment** to view metrics.
 
@@ -530,21 +530,21 @@ Open the SQL Stream Builder Interface and Click on New Project
 Name your project with your username as the prefix and click on **CREATE**. +
 **Example : wuser01_ssb_project**
 
-image:images/lab4/2step1-1.PNG[width=600] +
+image:images/lab4/2step1-1.png[width=600] +
 
 **Step 2** : Switch to the created project +
-image:images/lab4/2step2-1.PNG[width=600] +
+image:images/lab4/2step2-1.png[width=600] +
 
 **Step 3** : Create Kafka Data store + 
-image:images/lab4/2step3-1.PNG[] +
-image:images/lab4/2step3-2.PNG[width=600] +
-image:images/lab4/2step3-3.PNG[width=600] +
+image:images/lab4/2step3-1.png[] +
+image:images/lab4/2step3-2.png[width=600] +
+image:images/lab4/2step3-3.png[width=600] +
 
 Validate the source by clicking on Validate and then click on Create. +
-image:images/lab4/2step3-4.PNG[width=600] +
+image:images/lab4/2step3-4.png[width=600] +
 
 **Step 4** : Create Kafka Table +
-image:images/lab4/2step4-1.PNG[width=600] +
+image:images/lab4/2step4-1.png[width=600] +
 
 **Step 5** : Configure the Kafka Table + 
 
@@ -556,19 +556,19 @@ image:images/lab4/2step4-1.PNG[width=600] +
 - **Event Time Tab** : Deselect Use Kafka Timestamps
 - **Event Time Tab - Input Timestamp Column** : `timestamp`
 
-image:images/lab4/2step5-1.PNG[width=600] +
+image:images/lab4/2step5-1.png[width=600] +
 
 **Note**: At this point you can also discuss the detect schema functionality.
 
 Click **Create** +
-image:images/lab4/2step5-2.PNG[width=600] +
+image:images/lab4/2step5-2.png[width=600] +
 
 **Step 6** : Create a Flink Job +
-image:images/lab4/2step6-1.PNG[width=600] +
+image:images/lab4/2step6-1.png[width=600] +
 Give a job name and click **CREATE** +
-image:images/lab4/2step6-2.PNG[width=600] +
+image:images/lab4/2step6-2.png[width=600] +
 
-image:images/lab4/2step6-3.PNG[] +
+image:images/lab4/2step6-3.png[] +
 
 Add the following SQL Statement in the Editor
 
@@ -578,9 +578,12 @@ SELECT * FROM syslog WHERE severity <=3
 ----
 
 Run the Streaming SQL Job by clicking Execute. Also, ensure your syslog-to-kafka flow is running in CDF-PC. +
-image:images/lab4/2step6-4.PNG[] +
+image:images/lab4/2step6-4.png[] +
 
 You should see syslog messages with severity levels <=3 +
-image:images/lab4/2step6-5.PNG[] +
+image:images/lab4/2step6-5.png[] +
+
+
+
 
 
