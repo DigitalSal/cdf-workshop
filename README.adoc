@@ -2,7 +2,8 @@
 
 image::images/misc/banner-impact24.png[] +
 
-image::images/misc/UC.PNG[]
+
+image::images/misc/UC.PNG[] +
 
 '''
 
