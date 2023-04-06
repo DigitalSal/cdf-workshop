@@ -48,7 +48,7 @@ image::images/misc/Login.png[]
 
 You should land on the CDP Console as shown below. 
 
-image::images/misc/CDPConsole.png[]
+image::images/misc/CDPConsole.PNG[]
 
 === Setting Workload Password
 
