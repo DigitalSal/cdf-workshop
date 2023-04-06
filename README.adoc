@@ -55,14 +55,14 @@ image::images/misc/CDPConsole.PNG[]
 You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
 Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
 
-. Click on your `user name (Ex: wuser00@workshop.com`) at the lower left corner.
-. Click on the `Profile` option.
+. Click on your **user name** (Ex: `wuser00@workshop.com`) at the lower left corner.
+. Click on the **Profile** option.
 
 image:images/prereq/1.PNG[] +
 
-. Click option `Set Workload Password`.
-. Enter a suitable `Password` and `Confirm Password`.
-. Click button `Set Workload Password`.
+. Click option **Set Workload Password**.
+. Enter a suitable **Password** and **Confirm Password**.
+. Click button **Set Workload Password**.
 
 
 image:images/prereq/2.PNG[] +
@@ -71,7 +71,7 @@ image:images/prereq/3.PNG[] +
 
 {blank} +
 
-Check that you got the message - `Workload password is currently set` or alternatively, look for a message next to `Workload Password` which says `(Workload password is currently set)`
+Check that you got the message - **Workload password is currently set** or alternatively, look for a message next to **Workload Password** which says **(Workload password is currently set)**
 
 image:images/prereq/4.PNG[] +
 
@@ -118,13 +118,13 @@ The next step is to configure what is called a parameter.  These parameters are 
 image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
 
-** Add Parameter** : `HDFS Directory` +
+. **Add Parameter** : `HDFS Directory` +
 image:images/lab1/2-2step2-1.png[width=600] +
 
-** Add Parameter** : `CDP Workload User` +
+. **Add Parameter** : `CDP Workload User` +
 image:images/lab1/2-2step2-2.png[width=600] +
 
-** Add Sensitive Parameter** : `CDP Workload User Password` +
+. **Add Sensitive Parameter** : `CDP Workload User Password` +
 image:images/lab1/2-2step2-3.png[width=600] +
 image:images/lab1/2-2step2-4.png[width=600] +
 
