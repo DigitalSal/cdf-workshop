@@ -195,7 +195,7 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 	* *Directory* : `#{HDFS Directory}`
 	* *CDP Username* : `#{CDP Workload User}`
 	* *CDP Password* : `#{CDP Workload User Password}`
-- *Settings - Auto Terminate Relationships*: Check the Success box
+- *Relationships* : For *success* relationship - Check the Terminate box to automatically terminate FlowFile sent
 
 image:images/lab1/2-3step4.png[width=600] +
 
