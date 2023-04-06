@@ -55,14 +55,14 @@ image::images/misc/CDPConsole.PNG[]
 You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
 Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
 
-. Click on your **user name** (Ex: `wuser00@workshop.com`) at the lower left corner.
-. Click on the **Profile** option.
+. Click on your *User Name* (Ex: `wuser00@workshop.com`) at the lower left corner.
+. Click on the *Profile* option.
 
 image:images/prereq/1.PNG[] +
 
-. Click option **Set Workload Password**.
-. Enter a suitable **Password** and **Confirm Password**.
-. Click button **Set Workload Password**.
+. Click option *Set Workload Password*.
+. Enter a suitable *Password* and *Confirm Password*.
+. Click button *Set Workload Password*.
 
 
 image:images/prereq/2.PNG[] +
@@ -71,7 +71,7 @@ image:images/prereq/3.PNG[] +
 
 {blank} +
 
-Check that you got the message - **Workload password is currently set** or alternatively, look for a message next to **Workload Password** which says **(Workload password is currently set)**
+Check that you got the message - *Workload password is currently set* or alternatively, look for a message next to *Workload Password* which says *(Workload password is currently set)*
 
 image:images/prereq/4.PNG[] +
 
@@ -87,19 +87,19 @@ The following is a step by step guide in building a data flow for use within CDF
 
 === 2.  Building the Data Flow
 ==== 2.1. Create the canvas to design your flow
-===== **Step 1** : Access the DataFlow dataservice from the Management Console
+===== *Step 1* : Access the DataFlow dataservice from the Management Console
 
 image:images/lab1/2-1step1.png[] +
 
-===== **Step 2** : Got to the Flow Design
+===== *Step 2* : Got to the Flow Design
 
 image:images/lab1/2-1step2.png[] +
 
-===== **Step 3** : Create a new Draft ( This will be the main process group of your flow )
+===== *Step 3* : Create a new Draft ( This will be the main process group of your flow )
  
 image:images/lab1/2-1step3.png[] +
 
-===== **Step 4** : Select the appropriate environment and give your flow a name and click on CREATE
+===== *Step 4* : Select the appropriate environment and give your flow a name and click on CREATE
 
 image:images/lab1/2-1step4.png[] +
 
@@ -108,27 +108,27 @@ On successful creation of the Draft, you should now be redirected to the canvas 
 image:images/lab1/2-1step4-1.png[] +
 
 ==== 2.2. Adding new parameters
-===== **Step 1** : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS
+===== *Step 1* : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS
 
 image:images/lab1/2-2step1.png[] +
 
-===== **Step 2** : Configure Parameters
+===== *Step 2* : Configure Parameters
 The next step is to configure what is called a parameter.  These parameters are reused within the flow multiple times and will also be configurable at the time of deployment. Click on ADD PARAMETER to add non sensitive values, for any sensitive parameter please select ADD SENSITIVE PARAMETER.
 
 image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
 
-. **Add Parameter** : `HDFS Directory` +
+. *Add Parameter* : `HDFS Directory` +
 image:images/lab1/2-2step2-1.png[width=600] +
 
-. **Add Parameter** : `CDP Workload User` +
+. *Add Parameter* : `CDP Workload User` +
 image:images/lab1/2-2step2-2.png[width=600] +
 
-. **Add Sensitive Parameter** : `CDP Workload User Password` +
+. *Add Sensitive Parameter* : `CDP Workload User Password` +
 image:images/lab1/2-2step2-3.png[width=600] +
 image:images/lab1/2-2step2-4.png[width=600] +
 
-Click **Apply Changes**
+Click *Apply Changes*
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload Userand CDP Workload User Password.
 
@@ -148,25 +148,25 @@ Let’s go back to the canvas to start designing our flow.This flow will contain
 
 image:images/lab1/2-3step.png[width=600] +
 
-===== **STEP 1** : Add GenerateFlowFile processor 
+===== *STEP 1* : Add GenerateFlowFile processor 
 Pull the Processor onto the canvas and select `GenerateFlowFile` Processor and click on `ADD`.
 image:images/lab1/2-3step1.png[width=600] +
 
 image:images/lab1/2-3step1-1.png[width=600] +
 
-===== **STEP 2** : Configure GenerateFlowFile processor 
+===== *STEP 2* : Configure GenerateFlowFile processor 
 The GenerateFlowFile Processor will now be on your canvas and you can configure it in the following way by right clicking and selecting Configuration. +
 image:images/lab1/2-3step2.png[width=600] +
 
 Configure the processor in the following way:
 
-- **Processor Name** : DataGenerator
-- **Scheduling Strategy** : Timer Driven
-- **Run Duration** : 0 ms
-- **Run Schedule** : 30 sec
-- **Execution** : All Nodes
-- **Properties**
-* **Custom Text**
+- *Processor Name* : DataGenerator
+- *Scheduling Strategy* : Timer Driven
+- *Run Duration* : 0 ms
+- *Run Schedule* : 30 sec
+- *Execution* : All Nodes
+- *Properties*
+* *Custom Text*
 [source, text]
 ----
 <26>1 2021-09-21T21:32:43.967Z host1.example.com application4 3064 ID42 [exampleSDID@873 iut="4" eventSource="application" eventId="58"] application4 has 
@@ -177,30 +177,30 @@ This represents a syslog out in RFC5424 format. Subsequent portions of this work
 image:images/lab1/2-3step2-1.png[width=600] +
 Click on `APPLY`.
 
-===== **STEP 3** : Add PutCDPObjectStore processor 
+===== *STEP 3* : Add PutCDPObjectStore processor 
 Pull the Processor onto the canvas and select PutCDPObjectStore Processor and click on ADD.
 image:images/lab1/2-3step3.png[width=600] +
 
-===== **STEP 4** : Configure PutCDPObjectStore processor 
+===== *STEP 4* : Configure PutCDPObjectStore processor 
 The PutCDPObjectStore Processor needs to be configured as follows:
 
-- **Processor Name** : Move2S3
-- **Scheduling Strategy** : Timer Driven
-- **Run Duration** : 0 ms
-- **Run Schedule** : 0 sec
-- **Execution** : All Nodes
-- **Properties**
-	* **Directory** : #{HDFS Directory}
-	* **CDP Username** : #{CDP Workload User}
-	* **CDP Password** : #{CDP Workload User Password}
-- **Settings - Auto Terminate Relationships**: Check the Success box
+- *Processor Name* : Move2S3
+- *Scheduling Strategy* : Timer Driven
+- *Run Duration* : 0 ms
+- *Run Schedule* : 0 sec
+- *Execution* : All Nodes
+- *Properties*
+	* *Directory* : #{HDFS Directory}
+	* *CDP Username* : #{CDP Workload User}
+	* *CDP Password* : #{CDP Workload User Password}
+- *Settings - Auto Terminate Relationships*: Check the Success box
 
 image:images/lab1/2-3step4.png[width=600] +
 
 image:images/lab1/2-3step4-1.png[width=600] +
 
-===== **STEP 5** : Create connection between processors
-Connect the two processors by dragging the arrow from **DataGenerator** processor to the **Move2S3** processor and select on **SUCCESS** relation and click **ADD**
+===== *STEP 5* : Create connection between processors
+Connect the two processors by dragging the arrow from *DataGenerator* processor to the *Move2S3* processor and select on *SUCCESS* relation and click *ADD*
 
 image:images/lab1/2-3step5.png[width=600] +
 
@@ -219,15 +219,15 @@ Providing unique names to all queues is very important as they are used to defin
 
 To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information.
 
-For example, the success queue between GenerateFlowFile and PutCDPObjectStore is named **success_GenerateToCDP**. The failure queue for PutCDPObjectStore is named **failure_PutCDPObjectStore**.
+For example, the success queue between GenerateFlowFile and PutCDPObjectStore is named *success_GenerateToCDP*. The failure queue for PutCDPObjectStore is named *failure_PutCDPObjectStore*.
 
 image:images/lab1/2-4step.png[width=600] +
 
 
 === 3.  Testing the Data Flow
-**STEP 1** : Start test session
+*STEP 1* : Start test session
 To test your flow we need to first start the test session
-Click on **FLOW OPTIONS** and then select **START** on TEST SESSION
+Click on *FLOW OPTIONS* and then select *START* on TEST SESSION
 
 image:images/lab1/3step1.png[] +
 In the next window, click START SESSION +
@@ -239,7 +239,7 @@ image:images/lab1/3step1-2.png[width=600] +
 Once the Test Session is ready you will see the following message on the top right corner of your screen. +
 image:images/lab1/3step1-3.png[width=600] +
 
-**STEP 2** : Run the flow
+*STEP 2* : Run the flow
 Right click on the empty part of the canvas and select START. +
 image:images/lab1/3step2-1.png[width=600] +
 
@@ -252,10 +252,10 @@ image:images/lab1/3step2-3.png[width=600] +
 image:images/lab1/3step2-4.png[width=600] +
 
 Delete unwanted parameter +
-In the Move2S3 processor configuration delete the **cdp.configuration.resources** property +
+In the Move2S3 processor configuration delete the *cdp.configuration.resources* property +
 image:images/lab1/3step2-5.png[width=600] +
 
-Click on **APPLY** +
+Click on *APPLY* +
 image:images/lab1/3step2-6.png[width=600] +
 
 
@@ -269,37 +269,37 @@ image:images/lab1/4step2.png[width=600] +
 image:images/lab1/4step3.png[width=600] +
 
 === 5. Deploying the Flow
-**Step 1** : Search for the flow in the Flow Catalog +
+*Step 1* : Search for the flow in the Flow Catalog +
 
 image:images/lab1/5step1-1.png[width=600] +
 
 Click on the Flow, you should see the following: +
 image:images/lab1/5step1-2.png[width=600] +
 
-**Step 2** : Deploy +
-Click on **Version 1**, you should see a **Deploy** Option appear shortly. Then click on **Deploy**. +
+*Step 2* : Deploy +
+Click on *Version 1*, you should see a *Deploy* Option appear shortly. Then click on *Deploy*. +
 image:images/lab1/5step2-1.png[width=600] +
 
-**Step 3** : Select the CDP environment where this flow will be deployed. +
+*Step 3* : Select the CDP environment where this flow will be deployed. +
 image:images/lab1/5step3-1.png[width=600] +
 
-**Step 4** : Deployment Name +
+*Step 4* : Deployment Name +
 Give the deployment a unique name, then click Next. +
 image:images/lab1/5step4-1.png[width=600] +
-Click **NEXT**
+Click *NEXT*
 
-**Step 5** : Set the NiFi Configuration +
+*Step 5* : Set the NiFi Configuration +
 image:images/lab1/5step5-1.png[width=600] +
 
-**Step 6** : Set the Parameters +
+*Step 6* : Set the Parameters +
 Set the Username, Password and the Directory name and click NEXT
 image:images/lab1/5step6-1.png[width=600] +
 
-**Step 7** : Set the cluster size +
+*Step 7* : Set the cluster size +
 Select the Extra Small size and click NEXT +
 image:images/lab1/5step7-1.png[width=600] +
 
-**Step 8** : Add Key Performance indicators +
+*Step 8* : Add Key Performance indicators +
 Set up KPIs to track specific performance metrics of a deployed flow. 
 image:images/lab1/5step8-1.png[width=600] +
 
@@ -310,7 +310,7 @@ image:images/lab1/5step8-3.png[width=600] +
 Click Add and then Click Next +
 image:images/lab1/5step8-4.png[width=600] +
 
-**Step 9** : Click Deploy +
+*Step 9* : Click Deploy +
 image:images/lab1/5step9-1.png[width=600] +
 
 image:images/lab1/5step9-2.png[width=600] +
@@ -332,38 +332,38 @@ Note that a parameter context has already been defined in the flow and the queue
 
 === 2. Running the Workshop
 ==== 2.1. Create a Kafka Topic
-**Step 1** :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub
+*Step 1* :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub
 
 image:images/lab2/2-1step1-1.png[width=600] +
 
-**Step 2** :Click on Topics in the right tab
-**Step 3** :Click on Add New
-**Step 4** :Create a Topic with the following parameters then click Save:
+*Step 2* :Click on Topics in the right tab
+*Step 3* :Click on Add New
+*Step 4* :Create a Topic with the following parameters then click Save:
 
-- **Name**:	<username>-syslog
-- **Partitions**: 1
-- **Availability**: Moderate
-- **Cleanup Policy**: Delete
+- *Name*:	<username>-syslog
+- *Partitions*: 1
+- *Availability*: Moderate
+- *Cleanup Policy*: Delete
 
 image:images/lab2/2-1step4-1.png[width=600] +
 
-**Note** : The Flow will not work if you set the Cleanup Policy to anything other than **Delete**. This is because we are not specifying keys when writing to Kafka.
+*Note* : The Flow will not work if you set the Cleanup Policy to anything other than *Delete*. This is because we are not specifying keys when writing to Kafka.
 
 ==== 2.2. Create a Schema in Schema Registry
-**Step 1** : Login to Schema Registry by clicking the appropriate hyperlink in the Streams Messaging Datahub.
+*Step 1* : Login to Schema Registry by clicking the appropriate hyperlink in the Streams Messaging Datahub.
 
 image:images/lab2/2-2step1-1.png[width=600] +
 
-**Step 2** : Click on the + button on the top right to create a new schema.
-**Step 3** : Create a new schema with the following information:
+*Step 2* : Click on the + button on the top right to create a new schema.
+*Step 3* : Create a new schema with the following information:
 
-- **Name**: <username>-syslog
-- **Description**: syslog schema for dataflow workshop
-- **Type**: Avro schema provider
-- **Schema Group**: Kafka
-- **Compatibility**: Backward
-- **Evolve**: True
-- **Schema**: Text
+- *Name*: <username>-syslog
+- *Description*: syslog schema for dataflow workshop
+- *Type*: Avro schema provider
+- *Schema Group*: Kafka
+- *Compatibility*: Backward
+- *Evolve*: True
+- *Schema*: Text
 
 [source, json]
 ----
@@ -447,78 +447,78 @@ image:images/lab2/2-2step1-1.png[width=600] +
 
 ----
 
-**Note**: The name of the Kafka Topic and the Schema Name must be the same.
+*Note*: The name of the Kafka Topic and the Schema Name must be the same.
 
 == Lab 3 :  Operationalizing Externally Developed Data Flows with CDF-PC
 
 === 1. Import the Flow into the CDF-PC Catalog
-**Step 1** : Open the CDF-PC data service and click on Catalog in the left tab. +
+*Step 1* : Open the CDF-PC data service and click on Catalog in the left tab. +
 
 image:images/lab3/1step1-1.png[width=400] +
 
-**Step 2** : Select Import Flow Definition on the Top Right +
+*Step 2* : Select Import Flow Definition on the Top Right +
 
 image:images/lab3/1step2-1.png[width=400] +
 
-**Step 3** : Add the following information:
+*Step 3* : Add the following information:
 
-- **Flow Name**: syslog-to-kafka
-- **Flow Description**:
+- *Flow Name*: syslog-to-kafka
+- *Flow Description*:
 ```
 Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka
 ```
-- **NiFi Flow Configuration**: syslog-to-kafka.json (upload the Flow Definition)
-- **Version Comments**: Initial Version
+- *NiFi Flow Configuration*: syslog-to-kafka.json (upload the Flow Definition)
+- *Version Comments*: Initial Version
 
 image:images/lab3/1step3-1.png[width=400] +
 
 === 2. Deploy the Flow in CDF-PC
-**Step 1** : Search for the flow in the Flow Catalog +
+*Step 1* : Search for the flow in the Flow Catalog +
 image:images/lab3/2step1-1.png[] +
 
-**Step 2** : Click on the Flow, you should see the following: +
+*Step 2* : Click on the Flow, you should see the following: +
 image:images/lab3/2step2-1.png[width=600] +
 
-**Step 3** : Click on Version 1, you should see a Deploy Option appear shortly. Then click on Deploy. +
+*Step 3* : Click on Version 1, you should see a Deploy Option appear shortly. Then click on Deploy. +
 image:images/lab3/2step3-1.png[width=600] +
 
-**Step 4** : Select the CDP environment where this flow will be deployed. +
+*Step 4* : Select the CDP environment where this flow will be deployed. +
 image:images/lab3/2step4-1.png[width=600] +
 
-**Step 5** : Give the deployment a unique name, then click Next. +
+*Step 5* : Give the deployment a unique name, then click Next. +
 image:images/lab3/2step5-1.png[width=600] +
 
 
-**Step 6** : Add the Flow Parameters. These should be the same values that were used to successfully run the flow earlier in the Nif DataHub. +
+*Step 6* : Add the Flow Parameters. These should be the same values that were used to successfully run the flow earlier in the Nif DataHub. +
 
-- **CDP Workload User** : The workload username for the current user
-- **CDP Workload Password** : The workload password for the current user
-- **Kafka Broker Endpoint** : A comma separated list of Kafka Brokers. 
-- **Kafka Destination Topic** : `syslog`
-- **Kafka Producer ID** : `nifi_dfx_p1`
-- **Schema Name** : `syslog`
-- **Schema Registry Hostname** : The hostname of the master server in the Kafka Datahub. Do NOT use the URL hostname for schema registry, that one is for Knox.
-- **Filter Rule** : `SELECT * FROM FLOWFILE`
+- *CDP Workload User* : The workload username for the current user
+- *CDP Workload Password* : The workload password for the current user
+- *Kafka Broker Endpoint* : A comma separated list of Kafka Brokers. 
+- *Kafka Destination Topic* : `syslog`
+- *Kafka Producer ID* : `nifi_dfx_p1`
+- *Schema Name* : `syslog`
+- *Schema Registry Hostname* : The hostname of the master server in the Kafka Datahub. Do NOT use the URL hostname for schema registry, that one is for Knox.
+- *Filter Rule* : `SELECT * FROM FLOWFILE`
 
-**Note**: The only difference between the parameter entries in CDF-PC as compared 
+*Note*: The only difference between the parameter entries in CDF-PC as compared 
 to NiFi Datahub is the Kafka Producer ID
 
-**Step 7** : On the next page, define the Sizing and Scaling as follows +
+*Step 7* : On the next page, define the Sizing and Scaling as follows +
 
-- **Size** : Extra Small
-- **Enable Auto Scaling** : True
-- **Min Nodes** : 1
-- **Max Nodes** : 3
+- *Size* : Extra Small
+- *Enable Auto Scaling* : True
+- *Min Nodes* : 1
+- *Max Nodes* : 3
 
 image:images/lab3/2step7-1.png[width=600] +
 
-**Step 8** : Click Next, Skip the KPI page and Review your deployment. Then Click Deploy. +
+*Step 8* : Click Next, Skip the KPI page and Review your deployment. Then Click Deploy. +
 image:images/lab3/2step8-1.png[width=600] +
 
-**Step 9** : Proceed to the CDF-PC Dashboard and wait for your flow to deploy to complete. A Green Check Mark will appear once complete. +
+*Step 9* : Proceed to the CDF-PC Dashboard and wait for your flow to deploy to complete. A Green Check Mark will appear once complete. +
 image:images/lab3/2step9-1.png[] +
 
-**Step 10** : Click into your deployment and then Click **Manage Deployment** to view metrics.
+*Step 10* : Click into your deployment and then Click *Manage Deployment* to view metrics.
 
 
 
@@ -528,17 +528,17 @@ The purpose of this workshop is to demonstrate streaming analytic capabilities u
 
 === 2. Running the workshop
 
-**Step 1** : Create SSB Project +
+*Step 1* : Create SSB Project +
 Open the SQL Stream Builder Interface and Click on New Project
-Name your project with your username as the prefix and click on **CREATE**. +
-**Example : wuser01_ssb_project**
+Name your project with your username as the prefix and click on *CREATE*. +
+*Example : wuser01_ssb_project*
 
 image:images/lab4/2step1-1.png[width=600] +
 
-**Step 2** : Switch to the created project +
+*Step 2* : Switch to the created project +
 image:images/lab4/2step2-1.png[width=600] +
 
-**Step 3** : Create Kafka Data store + 
+*Step 3* : Create Kafka Data store + 
 image:images/lab4/2step3-1.png[] +
 image:images/lab4/2step3-2.png[width=600] +
 image:images/lab4/2step3-3.png[width=600] +
@@ -546,29 +546,29 @@ image:images/lab4/2step3-3.png[width=600] +
 Validate the source by clicking on Validate and then click on Create. +
 image:images/lab4/2step3-4.png[width=600] +
 
-**Step 4** : Create Kafka Table +
+*Step 4* : Create Kafka Table +
 image:images/lab4/2step4-1.png[width=600] +
 
-**Step 5** : Configure the Kafka Table + 
+*Step 5* : Configure the Kafka Table + 
 
-- **Table Name** : `syslog`
-- **Kafka Cluster** : `CDP Kafka`
-- **Topic Name** : `syslog`
-- **Data Format** : `JSON`
-- **Schema** : Copy the syslog schema from Schema Registry 
-- **Event Time Tab** : Deselect Use Kafka Timestamps
-- **Event Time Tab - Input Timestamp Column** : `timestamp`
+- *Table Name* : `syslog`
+- *Kafka Cluster* : `CDP Kafka`
+- *Topic Name* : `syslog`
+- *Data Format* : `JSON`
+- *Schema* : Copy the syslog schema from Schema Registry 
+- *Event Time Tab* : Deselect Use Kafka Timestamps
+- *Event Time Tab - Input Timestamp Column* : `timestamp`
 
 image:images/lab4/2step5-1.png[width=600] +
 
-**Note**: At this point you can also discuss the detect schema functionality.
+*Note*: At this point you can also discuss the detect schema functionality.
 
-Click **Create** +
+Click *Create* +
 image:images/lab4/2step5-2.png[width=600] +
 
-**Step 6** : Create a Flink Job +
+*Step 6* : Create a Flink Job +
 image:images/lab4/2step6-1.png[width=600] +
-Give a job name and click **CREATE** +
+Give a job name and click *CREATE* +
 image:images/lab4/2step6-2.png[width=600] +
 
 image:images/lab4/2step6-3.png[] +
