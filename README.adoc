@@ -113,7 +113,7 @@ image:images/lab1/2-1step4-1.png[] +
 image:images/lab1/2-2step1.png[] +
 
 ===== *Step 2* : Configure Parameters
-The next step is to configure what is called a parameter.  These parameters are reused within the flow multiple times and will also be configurable at the time of deployment. Click on ADD PARAMETER to add non sensitive values, for any sensitive parameter please select ADD SENSITIVE PARAMETER.
+The next step is to configure what is called a parameter.  These parameters are reused within the flow multiple times and will also be configurable at the time of deployment. Click on *Add Parameter* to add non sensitive values, for any sensitive parameter please select *Add Sensitive Parameter*.
 
 image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
@@ -130,12 +130,13 @@ image:images/lab1/2-2step2-4.png[width=600] +
 
 Click *Apply Changes*
 
-Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload Userand CDP Workload User Password.
+Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload User and CDP Workload User Password.
 
 To search for existing parameters:
 
-. Open a processor's configuration and proceed to the properties tab.
-. Enter: #{
+. Open a processor's configuration and proceed to the properties section.
+. Click in the Value column for a given property, once and input box pops up
+. Enter: `#{`
 . Hit  ‘control+spacebar’
 
 This will bring up a list of existing parameters that are not tagged as sensitive.
@@ -143,8 +144,8 @@ This will bring up a list of existing parameters that are not tagged as sensitiv
 ==== 2.3. Create the Flow
 Let’s go back to the canvas to start designing our flow.This flow will contain 2 Processors:
 
-- GenerateFlowFile - Generates random data
-- PutCDPObjectStore - Loads data into HDFS(S3)
+- *GenerateFlowFile* - Generates random data
+- *PutCDPObjectStore* - Loads data into HDFS(S3)
 
 image:images/lab1/2-3step.png[width=600] +
 
