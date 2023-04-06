@@ -145,6 +145,7 @@ Let’s go back to the canvas to start designing our flow.This flow will contain
 
 - GenerateFlowFile - Generates random data
 - PutCDPObjectStore - Loads data into HDFS(S3)
+
 image:images/lab1/2-3step.png[width=600] +
 
 ===== **STEP 1** : Add GenerateFlowFile processor 
@@ -208,7 +209,7 @@ image:images/lab1/2-3step5-1.png[width=600] +
 Your flow will now look something like this +
 image:images/lab1/2-3step5-2.png[width=600] +
 
-The Move2S3 processor does not know what to do in case of a failure, let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself.
+The Move2S3 processor does not know what to do in case of a failure, let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself. +
 image:images/lab1/2-3step5-3.png[width=600] +
 
 image:images/lab1/2-3step5-4.png[width=600] +
@@ -448,6 +449,8 @@ image:images/lab2/2-2step1-1.png[width=600] +
 **Note**: The name of the Kafka Topic and the Schema Name must be the same.
 
 == Lab 3 :  Operationalizing Externally Developed Data Flows with CDF-PC
+link:https://drive.google.com/file/d/1YI5FFOdI4MOwHPOoxf2L8gvPCH2DGU2Q/view?usp=sharing[Download syslog-to-kafka.json]
+
 === 1. Import the Flow into the CDF-PC Catalog
 **Step 1** : Open the CDF-PC data service and click on Catalog in the left tab. +
 
