@@ -108,7 +108,7 @@ On successful creation of the Draft, you should now be redirected to the canvas 
 image:images/lab1/2-1step4-1.png[] +
 
 ==== 2.2. Adding new parameters
-===== *Step 1* : Click on the FLOW OPTIONS on the top right corner of your canvas and then select PARAMETERS
+===== *Step 1* : Click on the *Flow Options* on the top right corner of your canvas and then select *Parameters*
 
 image:images/lab1/2-2step1.png[] +
 
