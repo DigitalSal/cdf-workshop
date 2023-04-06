@@ -128,7 +128,7 @@ image:images/lab1/2-2step2-2.png[width=600] +
 image:images/lab1/2-2step2-3.png[width=600] +
 image:images/lab1/2-2step2-4.png[width=600] +
 
-Click *Apply Changes* m +
+Click *Apply Changes* +
 Click *Back To Flow Designer* +
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload User and CDP Workload User Password.
