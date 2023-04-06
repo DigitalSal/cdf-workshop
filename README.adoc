@@ -118,17 +118,17 @@ The next step is to configure what is called a parameter.  These parameters are 
 image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
 
-**Parameter** : ```HDFS Directory``` +
+** Add Parameter** : `HDFS Directory` +
 image:images/lab1/2-2step2-1.png[width=600] +
 
-- CDP Workload User +
+** Add Parameter** : `CDP Workload User` +
 image:images/lab1/2-2step2-2.png[width=600] +
 
-- CDP Workload User Password - [ Sensitive Field ] +
+** Add Sensitive Parameter** : `CDP Workload User Password` +
 image:images/lab1/2-2step2-3.png[width=600] +
 image:images/lab1/2-2step2-4.png[width=600] +
 
-Click `APPLY CHANGES`
+Click **Apply Changes**
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload Userand CDP Workload User Password.
 
