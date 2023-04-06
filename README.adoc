@@ -192,9 +192,9 @@ The PutCDPObjectStore Processor needs to be configured as follows:
 - *Run Schedule* : 0 sec
 - *Execution* : All Nodes
 - *Properties*
-	* *Directory* : #{HDFS Directory}
-	* *CDP Username* : #{CDP Workload User}
-	* *CDP Password* : #{CDP Workload User Password}
+	* *Directory* : `#{HDFS Directory}`
+	* *CDP Username* : `#{CDP Workload User}`
+	* *CDP Password* : `#{CDP Workload User Password}`
 - *Settings - Auto Terminate Relationships*: Check the Success box
 
 image:images/lab1/2-3step4.png[width=600] +
