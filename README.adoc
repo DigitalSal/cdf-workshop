@@ -229,10 +229,10 @@ image:images/lab1/2-4step.png[width=600] +
 === 3.  Testing the Data Flow
 *STEP 1* : Start test session
 To test your flow we need to first start the test session
-Click on *FLOW OPTIONS* and then select *START* on TEST SESSION
+Click on *Flow Options* and then select *Start* on *Test Session*
 
 image:images/lab1/3step1.png[] +
-In the next window, click START SESSION +
+In the next window, click *Start Session* +
 image:images/lab1/3step1-1.png[width=600] +
 
 The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen +
@@ -242,10 +242,10 @@ Once the Test Session is ready you will see the following message on the top rig
 image:images/lab1/3step1-3.png[width=600] +
 
 *STEP 2* : Run the flow
-Right click on the empty part of the canvas and select START. +
+Right click on the empty part of the canvas and select *Start*. +
 image:images/lab1/3step2-1.png[width=600] +
 
-Both the processors should now be in the START state. +
+Both the processors should now be in the *Start* state. +
 image:images/lab1/3step2-2.png[width=600] +
 
 You will now see files coming into the folder which was specified as the Directory on the S3 bucket which is the Base data store for this environment. +
@@ -257,12 +257,12 @@ Delete unwanted parameter +
 In the Move2S3 processor configuration delete the *cdp.configuration.resources* property +
 image:images/lab1/3step2-5.png[width=600] +
 
-Click on *APPLY* +
+Click on *Apply* +
 image:images/lab1/3step2-6.png[width=600] +
 
 
 === 4.  Move the Flow to the Flow Catalog
-After the flow has been created and tested we can now PUBLISH the flow to the Flow Catalog
+After the flow has been created and tested we can now *Publish* the flow to the Flow Catalog
 
 image:images/lab1/4step1.png[] +
 
@@ -288,17 +288,17 @@ image:images/lab1/5step3-1.png[width=600] +
 *Step 4* : Deployment Name +
 Give the deployment a unique name, then click Next. +
 image:images/lab1/5step4-1.png[width=600] +
-Click *NEXT*
+Click *Next*
 
 *Step 5* : Set the NiFi Configuration +
 image:images/lab1/5step5-1.png[width=600] +
 
 *Step 6* : Set the Parameters +
-Set the Username, Password and the Directory name and click NEXT
+Set the Username, Password and the Directory name and click *Next* +
 image:images/lab1/5step6-1.png[width=600] +
 
 *Step 7* : Set the cluster size +
-Select the Extra Small size and click NEXT +
+Select the Extra Small size and click *Next* +
 image:images/lab1/5step7-1.png[width=600] +
 
 *Step 8* : Add Key Performance indicators +
@@ -309,10 +309,10 @@ image:images/lab1/5step8-2.png[width=600] +
 
 image:images/lab1/5step8-3.png[width=600] +
 
-Click Add and then Click Next +
+Click Add and then Click *Next* +
 image:images/lab1/5step8-4.png[width=600] +
 
-*Step 9* : Click Deploy +
+*Step 9* : Click *Deploy* +
 image:images/lab1/5step9-1.png[width=600] +
 
 image:images/lab1/5step9-2.png[width=600] +
