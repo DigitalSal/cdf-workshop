@@ -284,7 +284,7 @@ image:images/lab1/5step2-1.png[width=600] +
 image:images/lab1/5step3-1.png[width=600] +
 
 **Step 4** : Deployment Name +
-Give the deployment a unique name, then click Next.
+Give the deployment a unique name, then click Next. +
 image:images/lab1/5step4-1.png[width=600] +
 Click **NEXT**
 
@@ -449,7 +449,7 @@ image:images/lab2/2-2step1-1.png[width=600] +
 **Note**: The name of the Kafka Topic and the Schema Name must be the same.
 
 == Lab 3 :  Operationalizing Externally Developed Data Flows with CDF-PC
-link:https://drive.google.com/file/d/1YI5FFOdI4MOwHPOoxf2L8gvPCH2DGU2Q/view?usp=sharing[Download syslog-to-kafka.json]
+link:file:///drive.google.com/file/d/1YI5FFOdI4MOwHPOoxf2L8gvPCH2DGU2Q/view?usp=sharing[Download syslog-to-kafka.json]
 
 === 1. Import the Flow into the CDF-PC Catalog
 **Step 1** : Open the CDF-PC data service and click on Catalog in the left tab. +
