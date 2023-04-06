@@ -1,7 +1,7 @@
 = Introduction and Setup
 
 == Pre-requisites
-For the ease of carrying out the workshop and considering the time at hand, we have already taken care of some of the steps that need to be considered before we can start with the actual Lab steps. The prerequisites that need to be in place are:
+For the ease of carrying out the workshop and considering the time at hand, you will need to take care of the steps that need to be completed before you can start the actual Labs. The prerequisites that need to be in place are:
 
 . Flow Management Data Hub Cluster should be created and running.
 . Streams Messaging Data Hub Cluster should be created and running.
