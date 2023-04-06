@@ -75,7 +75,7 @@ Check that you got the message - *Workload password is currently set* or alterna
 
 image:images/prereq/4.PNG[] +
 
-== Lab 1: Create and Export Data Flow using DataHub
+== Lab 1: Create and Export Data Flow using Flow Designer
 
 === 1. Overview
 Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps:
@@ -128,8 +128,8 @@ image:images/lab1/2-2step2-2.png[width=600] +
 image:images/lab1/2-2step2-3.png[width=600] +
 image:images/lab1/2-2step2-4.png[width=600] +
 
-Click *Apply Changes*
-Click *Back To Flow Designer*
+Click *Apply Changes* m +
+Click *Back To Flow Designer* +
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is especially useful for CDP Workload User and CDP Workload User Password.
 
