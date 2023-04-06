@@ -221,7 +221,7 @@ Providing unique names to all queues is very important as they are used to defin
 
 To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information.
 
-For example, the success queue between GenerateFlowFile and PutCDPObjectStore is named *success_GenerateToCDP*. The failure queue for PutCDPObjectStore is named *failure_PutCDPObjectStore*.
+For example, the success queue between DataGenerator and Move2S3 is named *success_Move2S3*. The failure queue for Move2S3 is named *failure_Move2S3*.
 
 image:images/lab1/2-4step.png[width=600] +
 
