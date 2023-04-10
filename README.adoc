@@ -588,7 +588,7 @@ Add the following SQL Statement in the Editor
 
 [source, sql]
 ----
-SELECT * FROM _<username>_syslog WHERE severity <=3
+SELECT * FROM <username>syslog WHERE severity <=3
 ----
 
 Run the Streaming SQL Job by clicking Execute. Also, ensure your syslog-to-kafka flow is running in CDF-PC. +
