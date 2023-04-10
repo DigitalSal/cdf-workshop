@@ -1,12 +1,14 @@
 image::./images/misc/banner-impact24.png[] 
 
 = Cloudera DataFlow - Workshop Student Guide
-
 '''
 
 Version : 1.0.0 `27th March 2023` +
 
-'''
+''' 
+
+:toc: 
+
 == Preface
 
 Logging Modernization is a holistic approach towards unlocking the value of machine generated data by lowering processing costs and enabling a whole range of new analytics use cases: +
