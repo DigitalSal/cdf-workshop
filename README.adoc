@@ -562,7 +562,7 @@ image:images/lab4/2step4-1.png[width=600] +
 
 *Step 5* : Configure the Kafka Table + 
 
-- *Table Name* : `<username>-syslog`
+- *Table Name* : `<username>syslog`
 - *Kafka Cluster* : `CDP Kafka`
 - *Topic Name* : `<username>-syslog`
 - *Data Format* : `JSON`
@@ -572,11 +572,11 @@ image:images/lab4/2step4-1.png[width=600] +
 
 image:images/lab4/2step5-1.png[width=600] +
 
-*Note*: At this point you can also discuss the detect schema functionality.
+*Note*: At this point you can click on *detect schema*.
 
 Click *Create* +
 image:images/lab4/2step5-2.png[width=600] +
-
+*Note*: _You need to unlock your keytab to run queries._ +
 *Step 6* : Create a Flink Job +
 image:images/lab4/2step6-1.png[width=600] +
 Give a job name and click *CREATE* +
@@ -588,7 +588,7 @@ Add the following SQL Statement in the Editor
 
 [source, sql]
 ----
-SELECT * FROM syslog WHERE severity <=3
+SELECT * FROM _<username>_syslog WHERE severity <=3
 ----
 
 Run the Streaming SQL Job by clicking Execute. Also, ensure your syslog-to-kafka flow is running in CDF-PC. +
