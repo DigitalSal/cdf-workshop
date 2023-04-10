@@ -526,11 +526,11 @@ image:images/lab3/2step9-1.png[] +
 
 
 
-== Lab 3 : SQL Stream Builder
+== Lab 3 : Analyzing Syslog streaming data with SQL Stream Builder
 === 1. Overview
-The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry.
+The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder(SSB). We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry.
 
-=== 2. Running the workshop
+=== 2. Analyse data with an SSB Project
 
 *Step 1* : Create SSB Project +
 Open the SQL Stream Builder Interface and Click on New Project
@@ -555,9 +555,9 @@ image:images/lab4/2step4-1.png[width=600] +
 
 *Step 5* : Configure the Kafka Table + 
 
-- *Table Name* : `syslog`
+- *Table Name* : `<username>-syslog`
 - *Kafka Cluster* : `CDP Kafka`
-- *Topic Name* : `syslog`
+- *Topic Name* : `<username>-syslog`
 - *Data Format* : `JSON`
 - *Schema* : Copy the syslog schema from Schema Registry 
 - *Event Time Tab* : Deselect Use Kafka Timestamps
