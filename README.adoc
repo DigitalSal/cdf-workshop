@@ -338,7 +338,7 @@ Note that a parameter context has already been defined in the flow and the queue
 
 image:images/lab2/2-1step1-1.png[width=600] +
 
-*Step 2* :Click on Topics in the right tab +
+*Step 2* :Click on Topics in the left menu tab +
 *Step 3* :Click on Add New +
 *Step 4* :Create a Topic with the following parameters then click Save: +
 
