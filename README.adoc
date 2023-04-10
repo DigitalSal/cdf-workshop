@@ -453,9 +453,9 @@ image:images/lab2/2-2step1-1.png[width=600] +
 
 *Note*: The name of the Kafka Topic and the Schema Name must be the same.
 
-== Lab 3 :  Operationalizing Externally Developed Data Flows with CDF-PC
+=== 3. Operationalizing Externally Developed Data Flows with CDF-PC
 
-=== 1. Import the Flow into the CDF-PC Catalog
+==== 3.1. Import the Flow into the CDF-PC Catalog
 *Step 1* : Open the CDF-PC data service and click on Catalog in the left tab. +
 
 image:images/lab3/1step1-1.png[width=400] +
@@ -476,7 +476,7 @@ Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into 
 
 image:images/lab3/1step3-1.png[width=400] +
 
-=== 2. Deploy the Flow in CDF-PC
+==== 3.2. Deploy the Flow in CDF-PC
 *Step 1* : Search for the flow in the Flow Catalog +
 image:images/lab3/2step1-1.png[] +
 
@@ -526,7 +526,7 @@ image:images/lab3/2step9-1.png[] +
 
 
 
-== Lab 4 : SQL Stream Builder
+== Lab 3 : SQL Stream Builder
 === 1. Overview
 The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry.
 
