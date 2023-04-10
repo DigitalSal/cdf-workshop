@@ -332,7 +332,7 @@ The existing NiFi Flow will perform the following actions:
 Note that a parameter context has already been defined in the flow and the queues have been uniquely named.
 
 
-=== 2. Running the Workshop
+=== 2. Configure Stream Messaging to process syslog data 
 ==== 2.1. Create a Kafka Topic
 *Step 1* :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub
 
