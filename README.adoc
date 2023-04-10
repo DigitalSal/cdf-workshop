@@ -334,13 +334,13 @@ Note that a parameter context has already been defined in the flow and the queue
 
 === 2. Configure Stream Messaging to process syslog data 
 ==== 2.1. Create a Kafka Topic
-*Step 1* :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub
+*Step 1* :Login to Streams Messaging Manager by clicking the appropriate hyperlink in the Streams Messaging Datahub +
 
 image:images/lab2/2-1step1-1.png[width=600] +
 
-*Step 2* :Click on Topics in the right tab
-*Step 3* :Click on Add New
-*Step 4* :Create a Topic with the following parameters then click Save:
+*Step 2* :Click on Topics in the right tab +
+*Step 3* :Click on Add New +
+*Step 4* :Create a Topic with the following parameters then click Save: +
 
 - *Name*:	<username>-syslog
 - *Partitions*: 1
