@@ -69,9 +69,18 @@ image:images/prereq/3.PNG[] +
 
 {blank} +
 
-Check that you got the message - *Workload password is currently set* or alternatively, look for a message next to *Workload Password* which says *(Workload password is currently set)*
+Check that you got the message - *Workload password is currently set* or alternatively, look for a message next to *Workload Password* which says *(Workload password is currently set)*.
+
 
 image:images/prereq/4.PNG[] +
+
+=== Get Keytab
+. Click on the *Actions* button and select *Get Keytab*
+. Select the appropriate environment
+. Click the *Download* button
+. Save the file to your computer
+
+*Note*: The file will be used in the SQL Stream Builder lab.
 
 == Lab 1: Create and Export Data Flow using Flow Designer
 
