@@ -329,7 +329,9 @@ The existing NiFi Flow will perform the following actions:
 . Apply a SQL filter to the JSON records
 . Send the transformed syslog messages to Kafka
 
-Note that a parameter context has already been defined in the flow and the queues have been uniquely named.
+*Note*: The parameter context has already been defined in the flow and the queues have been uniquely named.
+
+*Before we can migrate the existing flow, we need to configure the streams messaging service that will be used by the flow to queue flow files.*
 
 
 === 2. Configure Stream Messaging to process syslog data 
