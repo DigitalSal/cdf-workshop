@@ -540,7 +540,7 @@ The purpose of this workshop is to demonstrate streaming analytic capabilities u
 === 2. Analyse data with an SSB Project
 
 *Step 1* : Create SSB Project +
-Open the SQL Stream Builder Interface and Click on New Project
+Open the Streaming SQL Console and Click on New Project
 Name your project with your username as the prefix and click on *CREATE*. +
 *Example : wuser01_ssb_project*
 
