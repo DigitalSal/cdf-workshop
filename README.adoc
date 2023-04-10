@@ -286,7 +286,7 @@ image:images/lab1/5step2-1.png[width=600] +
 image:images/lab1/5step3-1.png[width=600] +
 
 *Step 4* : Deployment Name +
-Give the deployment a unique name, then click Next. +
+Give the deployment a unique name(include <username>), then click Next. +
 image:images/lab1/5step4-1.png[width=600] +
 Click *Next*
 
@@ -466,7 +466,7 @@ image:images/lab3/1step2-1.png[width=400] +
 
 *Step 3* : Add the following information:
 
-- *Flow Name*: syslog-to-kafka
+- *Flow Name*: <username>-syslog-to-kafka
 - *Flow Description*:
 ```
 Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka
@@ -489,7 +489,7 @@ image:images/lab3/2step3-1.png[width=600] +
 *Step 4* : Select the CDP environment where this flow will be deployed. +
 image:images/lab3/2step4-1.png[width=600] +
 
-*Step 5* : Give the deployment a unique name, then click Next. +
+*Step 5* : Give the deployment a unique name(include <username>-), then click Next. +
 image:images/lab3/2step5-1.png[width=600] +
 
 
@@ -498,9 +498,9 @@ image:images/lab3/2step5-1.png[width=600] +
 - *CDP Workload User* : The workload username for the current user
 - *CDP Workload Password* : The workload password for the current user
 - *Kafka Broker Endpoint* : A comma separated list of Kafka Brokers. 
-- *Kafka Destination Topic* : `syslog`
+- *Kafka Destination Topic* : `<username>-syslog`
 - *Kafka Producer ID* : `nifi_dfx_p1`
-- *Schema Name* : `syslog`
+- *Schema Name* : `<username>-syslog`
 - *Schema Registry Hostname* : The hostname of the master server in the Kafka Datahub. Do NOT use the URL hostname for schema registry, that one is for Knox.
 - *Filter Rule* : `SELECT * FROM FLOWFILE`
 
