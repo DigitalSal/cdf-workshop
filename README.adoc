@@ -75,7 +75,7 @@ Check that you got the message - *Workload password is currently set* or alterna
 image:images/prereq/4.PNG[] +
 
 === Get Keytab
-. Click on the *Actions* button and select *Get Keytab*
+. From the user profile page, click on the *Actions* button and select *Get Keytab*
 . Select the appropriate environment
 . Click the *Download* button
 . Save the file to your computer
