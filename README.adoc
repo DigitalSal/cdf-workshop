@@ -108,7 +108,7 @@ image:images/lab1/2-1step2.png[] +
  
 image:images/lab1/2-1step3.png[] +
 
-===== *Step 4* : Select the appropriate environment and give your flow a name and click on CREATE
+===== *Step 4* : Select the appropriate environment and give your flow a name (example: <username>-DataDumpFlow) and click on CREATE
 
 image:images/lab1/2-1step4.png[] +
 
