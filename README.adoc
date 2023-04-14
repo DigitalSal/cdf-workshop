@@ -1,6 +1,6 @@
 
-image::./images/misc/banner-impact24.png[]
 = Cloudera DataFlow - Workshop Student Guide
+image::./images/misc/banner-impact24.png[]
 // :toc: left 
 '''
 
