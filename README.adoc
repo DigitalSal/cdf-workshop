@@ -118,6 +118,21 @@ On successful creation of the Draft, you should now be redirected to the canvas 
 
 image:images/lab1/2-1step4-1.png[] +
 
+===== *Step 5* :  Start test session
+To test your flow we need to first start the test session
+Click on *Flow Options* and then select *Start* on *Test Session*
+
+image:images/lab1/3step1.png[] +
+In the next window, click *Start Session* +
+image:images/lab1/3step1-1.png[width=600] +
+
+The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen +
+image:images/lab1/3step1-2.png[width=600] +
+
+Once the Test Session is ready you will see the following message on the top right corner of your screen. +
+image:images/lab1/3step1-3.png[width=600] +
+
+
 ==== 2.2. Adding new parameters
 ===== *Step 1* : Click on the *Flow Options* on the top right corner of your canvas and then select *Parameters*
 
