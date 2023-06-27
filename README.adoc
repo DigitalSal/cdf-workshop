@@ -144,7 +144,7 @@ The next step is to configure what is called a parameter.  These parameters are 
 image:images/lab1/2-2step2.png[] +
 We need to add the following parameters.
 
-. *Add Parameter* : `HDFS Directory` +
+. *Add Parameter* (example value ='\my-data\cdfuser110'): `HDFS Directory` +
 image:images/lab1/2-2step2-1.png[width=600] +
 
 . *Add Parameter* : `CDP Workload User` +
