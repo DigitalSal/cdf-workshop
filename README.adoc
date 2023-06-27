@@ -44,7 +44,7 @@ For the ease of carrying out the workshop and considering the time at hand, we h
 === Verify access to the environment
 Open the below link and login with the credentials assigned to you.
 
-http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop Login]
+http://3.109.161.118/auth/realms/partner-hols/protocol/saml/clients/cdp-sso[Workshop Login]
 
 image::images/misc/Login.png[]
 
