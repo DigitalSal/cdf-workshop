@@ -94,11 +94,6 @@ The data flow that would be used for CDF-PC must be self contained within a proc
 Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc.
 All queues need to have meaningful names (inplace of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC.
 
-==== 1.1. Create a Project
-With projects, you will be able to assign users and resources. This will allow you to organize and control access.
-
-===== *Step 1* : 
-
 The following is a step by step guide in building a data flow for use within CDF-PC.
 
 === 2.  Building the Data Flow
@@ -106,6 +101,10 @@ The following is a step by step guide in building a data flow for use within CDF
 ===== *Step 1* : Access the DataFlow dataservice from the Management Console
 
 image:images/lab1/2-1step1.png[] +
+
+===== *Step 2* : Create a Project ( With projects, you will be able to assign users and resources. This will allow you to organize and control access. )
+
+image:images/lab1/2-1step2New.png[] +
 
 ===== *Step 2* : Got to the Flow Design
 
