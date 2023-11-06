@@ -106,6 +106,8 @@ image:images/lab1/2-1step1.png[] +
 
 image:images/lab1/2-1step2New.png[] +
 
+image:images/lab1/2-1step2New2.png[] +
+
 ===== *Step 2* : Got to the Flow Design
 
 image:images/lab1/2-1step2.png[] +
