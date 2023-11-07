@@ -119,7 +119,7 @@ image:images/lab1/2-1step3.png[] +
 
 ===== *Step 5* : Select the appropriate environment and your previously created project and give your flow a name (example: <username>-DataDumpFlow) and click on CREATE
 
-image:images/lab1/2-1step4New.png[] +
+image:images/lab1/2-1step4-1New.png[] +
 
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow
 
