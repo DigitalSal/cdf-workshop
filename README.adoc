@@ -557,7 +557,7 @@ image:images/lab3/2step9-1.png[] +
 
 *Step 10* : Click into your deployment and then Click *Manage Deployment* to view metrics.
 
-
+= END OF WORKSHOP FOR 11/7/2023
 
 == Lab 3 : Analyzing Syslog streaming data with SQL Stream Builder
 === 1. Overview
