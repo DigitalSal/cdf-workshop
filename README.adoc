@@ -105,18 +105,19 @@ image:images/lab1/2-1step1.png[] +
 ===== *Step 2* : Create a Project ( With projects, you will be able to assign users and resources. This will allow you to organize and control access. )
 
 image:images/lab1/2-1step2New.png[] +
+Provide a unique Project name. Use your username.
 
 image:images/lab1/2-1step2New2.png[] +
 
-===== *Step 2* : Got to the Flow Design
+===== *Step 3* : Got to the Flow Design
 
 image:images/lab1/2-1step2.png[] +
 
-===== *Step 3* : Create a new Draft ( This will be the main process group of your flow )
+===== *Step 4* : Create a new Draft ( This will be the main process group of your flow )
  
 image:images/lab1/2-1step3.png[] +
 
-===== *Step 4* : Select the appropriate environment and give your flow a name (example: <username>-DataDumpFlow) and click on CREATE
+===== *Step 5* : Select the appropriate environment and give your flow a name (example: <username>-DataDumpFlow) and click on CREATE
 
 image:images/lab1/2-1step4.png[] +
 
@@ -124,7 +125,7 @@ On successful creation of the Draft, you should now be redirected to the canvas 
 
 image:images/lab1/2-1step4-1.png[] +
 
-===== *Step 5* :  Start test session
+===== *Step 6* :  Start test session
 To test your flow we need to first start the test session
 Click on *Flow Options* and then select *Start* on *Test Session*
 
